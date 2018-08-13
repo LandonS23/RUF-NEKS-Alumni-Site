@@ -1,61 +1,64 @@
 import React, { Component } from 'react';
-import logo from './paddles.png';
-// import crest from './Crest.png';
-import video from './NEKS.mp4';
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
   Button,
   Container,
   Dropdown,
-  Header,
   Image,
   Menu
-} from 'semantic-ui-react'
+} from 'semantic-ui-react';
+
 import './App.css';
+
+import Home from './components/home/Home';
+import Calendar from './components/calendar/Calendar';
+import logo from './resources/paddles.png';
+// import crest from './Crest.png';
 
 class App extends Component {
 
   render() {
     return (
-      <div>
-        <Menu fixed='top' inverted>
-          <Container>
-            <Menu.Item as='a' header>
-              <Image size='mini' src={logo} className="logo" />
-              RUF/NEKS Alumni Association
-            </Menu.Item>
+      <Router>
+        <div>
+          <Menu fixed='top' inverted>
+            <Container>
+              <Link to="/" className="home-link">
+                <Menu.Item className="link" header>
+                    <Image size='mini' src={logo} className="logo" />
+                    RUF/NEKS Alumni Association
+                </Menu.Item>
+              </Link>
 
-            <Menu.Item as='a'>Pay Dues</Menu.Item>
+              <Link to="/dues"><Menu.Item className="link">Pay Dues</Menu.Item></Link>
 
-            <Dropdown item simple text='Donate'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Donate to Scholarship</Dropdown.Item>
-                <Dropdown.Item>Donate to Tailgates</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+              <Dropdown item simple text='Donate'>
+                <Dropdown.Menu>
+                  <Link to="/donate-scholarship"><Dropdown.Item className="dropdown-link">Donate to Scholarship</Dropdown.Item></Link>
+                  <Link to="/donate-tailgates"><Dropdown.Item className="dropdown-link">Donate to Tailgates</Dropdown.Item></Link>
+                </Dropdown.Menu>
+              </Dropdown>
 
-            <Menu.Item as='a'>Event Calendar</Menu.Item>
-            <Menu.Item as='a'>Membership Logs</Menu.Item>
-            <Menu.Item as='a'>Photo Archives</Menu.Item>
+              <Link to="/calendar"><Menu.Item className="link">Event Calendar</Menu.Item></Link>
+              <Link to="/members"><Menu.Item className="link">Membership Logs</Menu.Item></Link>
+              <Link to="/photo-archives"><Menu.Item className="link">Photo Archives</Menu.Item></Link>
 
-            <Menu.Item position='right' className="right-menu">
-              <Button as='a' inverted>Log in</Button>
-              <Button as='a' inverted className="sign-up-button">Sign Up</Button>
-            </Menu.Item>
-          </Container>
-        </Menu>
+              <Menu.Item position='right' className="right-menu">
+                <Link to="/login"><Button inverted>Log in</Button></Link>
+                <Link to="/sign-up"><Button inverted className="sign-up-button">Sign Up</Button></Link>
+              </Menu.Item>
+            </Container>
+          </Menu>
 
-        <div className="fullscreen-bg">
-          <video loop muted autoPlay src={video} className="fullscreen-bg__video" />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/calendar" component={Calendar} />
+            {/* <Route path="/members" component={Members} /> */}
+
+            <Route component={Home} />
+          </Switch>
         </div>
-
-        <Container text className="body-container">
-          <Header as='h1' className="white">Oklahoma RUF/NEKS Alumni Association</Header>
-          <p>America's Oldest Male Spirit Organization</p>
-
-          {/* <Image src='/images/wireframe/media-paragraph.png' style={{ marginTop: '2em' }} /> */}
-        </Container>
-      </div>
+      </Router>
     );
   }
 }
