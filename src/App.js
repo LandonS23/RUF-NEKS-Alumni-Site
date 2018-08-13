@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import logo from './Paddles.png';
+import logo from './paddles.png';
+// import crest from './Crest.png';
+import video from './NEKS.mp4';
+
 import {
   Button,
   Container,
@@ -42,12 +45,13 @@ class App extends Component {
           </Container>
         </Menu>
 
+        <div className="fullscreen-bg">
+          <video loop muted autoPlay src={video} className="fullscreen-bg__video" />
+        </div>
+
         <Container text className="body-container">
-          <Header as='h1'>Oklahoma RUF/NEKS Alumni Association</Header>
+          <Header as='h1' className="white">Oklahoma RUF/NEKS Alumni Association</Header>
           <p>America's Oldest Male Spirit Organization</p>
-          <p>
-            Our mission is to provide for the RUF/NEKS organization, its current members and alumni, and to provide a foundation for scholarships to current members and to sponsor events for our alumni.
-          </p>
 
           {/* <Image src='/images/wireframe/media-paragraph.png' style={{ marginTop: '2em' }} /> */}
         </Container>
