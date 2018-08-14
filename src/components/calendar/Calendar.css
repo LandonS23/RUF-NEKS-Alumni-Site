@@ -3,3 +3,8 @@
   height: 100vh;
   background-color: rgb(45, 45, 45);
 }
+
+.calendar {
+  margin-top: 1%;
+  margin-left: 10%;
+}
