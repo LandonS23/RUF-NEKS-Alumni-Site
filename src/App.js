@@ -12,11 +12,11 @@ import './App.css';
 
 import Home from './components/home/Home';
 import Calendar from './components/calendar/Calendar';
+import Members from './components/member-logs/Members';
 import logo from './resources/paddles.png';
 // import crest from './Crest.png';
 
 class App extends Component {
-
   render() {
     return (
       <Router>
@@ -53,7 +53,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/calendar" component={Calendar} />
-            {/* <Route path="/members" component={Members} /> */}
+            <Route path="/members" component={Members} />
 
             <Route component={Home} />
           </Switch>

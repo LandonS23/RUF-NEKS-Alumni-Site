@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-// import {
-//   Container,
-//   Header,
-//   Image
-// } from 'semantic-ui-react';
 
 import './Calendar.css';
 
