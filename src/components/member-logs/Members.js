@@ -15,12 +15,6 @@ class Members extends Component {
   async componentDidMount() {
     if(firebase.apps.length === 0) {
       let config = {
-        apiKey: "AIzaSyDcKAvszJ5f8WfdjLSOvK7vYcL3ak08TOE",
-        authDomain: "rufneks-alumni-association.firebaseapp.com",
-        databaseURL: "https://rufneks-alumni-association.firebaseio.com",
-        projectId: "rufneks-alumni-association",
-        storageBucket: "rufneks-alumni-association.appspot.com",
-        messagingSenderId: "311894999395"
       };
 
       firebase.initializeApp(config);
