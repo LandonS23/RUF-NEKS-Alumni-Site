@@ -13,7 +13,7 @@ class Members extends Component {
 		loading: true,
 		page: 0,
 		pageSize: 10,
-    total: 1973,
+    total: 1979,
 		currentPageData: [],
 		pages: 0,
     members: []
@@ -21,14 +21,13 @@ class Members extends Component {
 
   onPageChange = (pageIndex) => {
 		const members = this.state.members;
-		const total = this.state.total;
 
-		if((!members[pageIndex * this.state.pageSize] || !members[(pageIndex * this.state.pageSize) + this.state.pageSize - 1]) && members.length !== total) {
-			const batchSize = this.state.pageSize > 30 ? this.state.pageSize : 30;
+		if(!members[pageIndex * this.state.pageSize] || !members[(pageIndex * this.state.pageSize) + this.state.pageSize - 1]) {
+			const batchSize = this.state.pageSize;
 
 			if(pageIndex === this.state.page - 1) {
-        link = db.collection("members").orderBy("index").startAt((pageIndex - 2) * this.state.pageSize).limit(batchSize);
-        pageStart = (pageIndex - 2) * this.state.pageSize;
+        link = db.collection("members").orderBy("index").startAt((pageIndex) * this.state.pageSize).limit(batchSize);
+        pageStart = pageIndex * this.state.pageSize;
         size = this.state.pageSize;
 
 				this.setState({
@@ -38,7 +37,6 @@ class Members extends Component {
 
 				this.setState({previous: true});
 			} else {
-        console.log(pageIndex * this.state.pageSize, batchSize);
         link = db.collection("members").orderBy("index").startAt(pageIndex * this.state.pageSize).limit(batchSize);
         pageStart = pageIndex * this.state.pageSize
         size = this.state.pageSize;
@@ -77,7 +75,7 @@ class Members extends Component {
 
 
 		if(needData) {
-			const batchSize = pageSize > 30 ? pageSize : 30;
+			const batchSize = pageSize;
       link = db.collection("members").orderBy("index").startAt(pageIndex * pageSize).limit(batchSize);
       pageStart = pageIndex * pageSize;
       size = pageSize;
@@ -138,7 +136,7 @@ class Members extends Component {
 				});
 			} else if(link && !this.state.gettingLink) {
         let index;
-        let {previous, pageSize} = this.state;
+        let {previous} = this.state;
 
 				this.setState({gettingLink: true});
 				let members = [...this.state.members];
@@ -152,7 +150,6 @@ class Members extends Component {
 
         link = null;
 
-        console.log(members, size, members.slice(pageStart, pageStart + size));
         this.setState({
           members,
           currentPageData: !previous ? members.slice(pageStart, pageStart + size) : members.slice(pageStart + (size * 2), pageStart + (size * 2) + size),
@@ -191,7 +188,7 @@ class Members extends Component {
                     Header: "First Name",
                     id: "firstName",
                     sortable: false,
-                    accessor: d => d.data()["First Name"]
+                    accessor: d => d.data()["First Name"] || '(Unknown)'
                   },
                   {
                     Header: "Last Name",
