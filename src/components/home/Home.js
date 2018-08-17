@@ -15,8 +15,10 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    let video = this.videoRef.current;
-    setTimeout(function(){ video.play(); }, 2000);
+    if(window.innerWidth > 767) {
+      let video = this.videoRef.current;
+      setTimeout(function(){ video.play(); }, 2000);
+    }
   }
 
   render() {
