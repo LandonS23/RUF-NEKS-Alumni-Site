@@ -5,16 +5,26 @@ import {
 } from 'semantic-ui-react';
 
 import video from '../../resources/NEKS.mp4';
+import crest from '../../resources/Crest.png';
 
 import './Home.css';
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.videoRef = React.createRef();
+  }
+
+  componentDidMount() {
+    let video = this.videoRef.current;
+    setTimeout(function(){ video.play(); }, 2000);
+  }
 
   render() {
     return (
       <div>
         <div className="fullscreen-bg">
-          <video loop muted autoPlay src={video} className="fullscreen-bg__video" />
+          <video ref={this.videoRef} loop muted src={video} preload="true" poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=" className="fullscreen-bg__video" />
         </div>
 
         <Container text className="body-container">

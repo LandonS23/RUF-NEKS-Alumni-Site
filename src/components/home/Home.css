@@ -20,9 +20,10 @@
     height: auto;
     min-width: 100%;
     min-height: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    background: transparent url('../../resources/Crest.png') no-repeat 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
 	  transform: translate(-50%, -50%);
 }
 
