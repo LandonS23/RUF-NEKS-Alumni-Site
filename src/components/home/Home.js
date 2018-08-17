@@ -30,8 +30,13 @@ class Home extends Component {
         </div>
 
         <Container text className="body-container">
-          <Header as='h1' className="white">Oklahoma RUF/NEKS Alumni Association</Header>
-          <p>America's Oldest Male Spirit Organization</p>
+          <h3>America's Oldest Male Spirit Organization</h3>
+          <Header as='h1' className="white">OKLAHOMA RUF/NEKS</Header>
+          <p className="mission">Our mission is to provide for the University of Oklahoma RUF/NEKS organization. We do so by providing scholarships to current members, and sponsoring events for our alumni.</p>
+          <div className="info">
+            <span>$3,686.11 </span> 
+            raised for the Mike James RUF/NEKS Memorial Scholarship!
+          </div>
         </Container>
       </div>
     );
