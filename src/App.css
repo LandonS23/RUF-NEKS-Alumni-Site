@@ -66,6 +66,13 @@ body {
     display: block;
     background-color: #880000;
   }
+  
+  .ui.labeled.icon.menu .item>.icon:not(.dropdown) {
+      height: 0.5em;
+      display: block;
+      font-size: 1.21428571em!important;
+      margin: 0 auto 1rem!important;
+  }
 
   .menu-bar {
     height: 50px;
@@ -77,6 +84,10 @@ body {
   .ui.segment {
     border: none;
     margin-top: 0;
+  }
+  
+  .ui.menu .item {
+    padding: .75em 1em;
   }
 
   .sidebar.icon {
