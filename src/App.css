@@ -49,6 +49,57 @@ body {
   margin-right: 1.5em;
 }
 
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  body .ui.inverted::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.15) !important;
+  }
+
+  .menu-mobile {
+    display: block;
+    background-color: #880000;
+  }
+
+  .menu-bar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ui.segment {
+    border: none;
+    margin-top: 0;
+  }
+
+  .sidebar.icon {
+    margin-left: 15px;
+    font-size: 1.5em;
+  }
+
+  .home-link {
+    color: rgba(255,255,255,.9);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .logo {
+    margin-right: 5px;
+  }
+
+  .fill {
+    height: 1px;
+    width: calc(1.43em + 15px);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .ui.menu:not(.secondary):not(.text):not(.tabular):not(.borderless)>.container>.item:not(.right):not(.borderless):first-child {
     border-left: 0;
