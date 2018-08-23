@@ -1,0 +1,57 @@
+.photos-view {
+  height: 100vh;
+  background-color: rgb(45, 45, 45);
+  padding: 58.45px 10% 0;
+}
+
+.photos-view .carousel-image {
+  padding: 2em 3em;
+  height: calc(100vh - 108.45px);
+  margin: auto;
+}
+
+.slick-next, .slick-prev {
+  height: 30px;
+  width: 30px;
+}
+
+.slick-next {
+  right: -35px
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next:before, .slick-prev:before {
+  font-size: 30px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+
+.slick-slide div:focus {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+    .photos-view {
+      padding: 0;
+    }
+
+    .slick-dots li button:before {
+      font-size: 6px;
+    }
+
+    .photos-view .carousel-image {
+      height: 50vh;
+      margin-top: calc(25vh - 50px);
+      padding: 5px 15px;
+    }
+}

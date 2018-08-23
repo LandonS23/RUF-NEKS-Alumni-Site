@@ -83,21 +83,21 @@
 
     .ui.container.body-container {
       padding-top: 0;
-      height: calc(100vh - 52px - 2em);
+      height: calc(100vh - 52px);
       margin: 0 !important;
     }
-    
+
     .ui.header.white {
         font-size: 23px;
         line-height: 28px;
         margin-bottom: 15px;
     }
-    
+
     .body-container h3 {
       font-size: 12px;
       margin: 15px 0 0;
     }
-    
+
     .body-container div.info {
       font-size: 14px;
       max-width: 250px;

@@ -11,6 +11,6 @@
 @media (max-width: 767px) {
     .members-view {
       padding-top: 0;
-      height: calc(100vh - 52px - 2em);
+      height: calc(100vh - 52px);
     }
   }

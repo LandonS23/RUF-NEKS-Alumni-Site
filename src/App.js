@@ -16,6 +16,7 @@ import './App.css';
 import Home from './components/home/Home';
 import Calendar from './components/calendar/Calendar';
 import Members from './components/member-logs/Members';
+import Photos from './components/photo-archives/Photos';
 import logo from './resources/paddles.png';
 
 class App extends Component {
@@ -67,7 +68,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/calendar" component={Calendar} />
               <Route path="/members" component={Members} />
-
+              <Route path="/photo-archives" component={Photos} />
               <Route component={Home} />
             </Switch>
           </div>
@@ -111,7 +112,7 @@ class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route path="/calendar" component={Calendar} />
                     <Route path="/members" component={Members} />
-
+                    <Route path="/photo-archives" component={Photos} />
                     <Route component={Home} />
                   </Switch>
                 </Segment>

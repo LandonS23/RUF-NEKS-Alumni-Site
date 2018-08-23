@@ -66,7 +66,7 @@ body {
     display: block;
     background-color: #880000;
   }
-  
+
   .ui.labeled.icon.menu .item>.icon:not(.dropdown) {
       height: 0.5em;
       display: block;
@@ -84,8 +84,9 @@ body {
   .ui.segment {
     border: none;
     margin-top: 0;
+    padding: 0;
   }
-  
+
   .ui.menu .item {
     padding: .75em 1em;
   }
