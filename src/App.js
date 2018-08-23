@@ -101,7 +101,7 @@ class App extends Component {
                 <Link to="/donate" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='dollar sign'/>Donate</Menu.Item></Link>
                 <Link to="/members" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='address book outline'/>Members</Menu.Item></Link>
                 <Link to="/photo-archives" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='photo'/>Photos</Menu.Item></Link>
-                <Link to="/contact" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='envelope outline'/>Contact</Menu.Item></Link>
+                <a href="mailto:rufneksalumni@gmail.com"><Menu.Item className="link"><Icon name='envelope outline'/>Contact</Menu.Item></a>
               </Sidebar>
 
               <Sidebar.Pusher dimmed={visible}>
