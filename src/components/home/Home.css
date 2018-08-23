@@ -82,7 +82,7 @@
     }
 
     .ui.container.body-container {
-      padding-top: 0;
+      padding-top: 15px;
       height: calc(100vh - 52px);
       margin: 0 !important;
     }
@@ -130,14 +130,14 @@
       background: transparent url('../../resources/Crest.png') no-repeat 0 0;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 200px 200px;
+      background-size: 300px 300px;
     }
 
     .mobile-bg:before {
       content: '';
       position: absolute;
       z-index: 1;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       top: 0;
       right: 0;
       bottom: 0;

@@ -1,6 +1,6 @@
 .photos-view {
   height: 100vh;
-  background-color: rgb(45, 45, 45);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 58.45px 10% 0;
 }
 
@@ -43,6 +43,7 @@
 @media (max-width: 767px) {
     .photos-view {
       padding: 0;
+      height: calc(100vh - 50px);
     }
 
     .slick-dots li button:before {
