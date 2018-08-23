@@ -57,7 +57,7 @@ class App extends Component {
                 <Link to="/photo-archives"><Menu.Item className="link">Photo Archives</Menu.Item></Link>
 
                 <Menu.Item position='right' className="right-menu">
-                  <Link to="/contact"><Button inverted>Contact Us</Button></Link>
+                  <a href="mailto:rufneksalumni@gmail.com"><Button inverted>Contact Us</Button></a>
                 </Menu.Item>
               </Container>
             </Menu>
