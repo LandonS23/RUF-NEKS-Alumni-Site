@@ -44,14 +44,13 @@ class App extends Component {
                   </Menu.Item>
                 </Link>
 
-                <Link to="/dues"><Menu.Item className="link">Pay Dues</Menu.Item></Link>
-
-                <Dropdown item simple text='Donate'>
-                  <Dropdown.Menu>
-                    <Link to="/donate-scholarship"><Dropdown.Item className="dropdown-link">Donate to Scholarship</Dropdown.Item></Link>
-                    <Link to="/donate-tailgates"><Dropdown.Item className="dropdown-link">Donate to Tailgates</Dropdown.Item></Link>
-                  </Dropdown.Menu>
-                </Dropdown>
+                <Menu.Item className="link" header>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ">Pay Dues</a>
+                </Menu.Item>
+                
+                <Menu.Item className="link" header>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ">Donate</a>
+                </Menu.Item>
 
                 <Link to="/calendar"><Menu.Item className="link">Event Calendar</Menu.Item></Link>
                 <Link to="/members"><Menu.Item className="link">Membership Logs</Menu.Item></Link>
@@ -98,8 +97,8 @@ class App extends Component {
 
                 <Link to="/" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='home'/>Home</Menu.Item></Link>
                 <Link to="/calendar" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='calendar alternate outline'/>Calendar</Menu.Item></Link>
-                <Link to="/dues" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='money bill alternate outline'/>Pay Dues</Menu.Item></Link>
-                <Link to="/donate" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='dollar sign'/>Donate</Menu.Item></Link>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ"><Menu.Item className="link"><Icon name='money bill alternate outline'/>Pay Dues</Menu.Item></a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ"><Menu.Item className="link"><Icon name='dollar sign'/>Donate</Menu.Item></a>
                 <Link to="/members" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='address book outline'/>Members</Menu.Item></Link>
                 <Link to="/photo-archives" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='photo'/>Photos</Menu.Item></Link>
                 <a href="mailto:rufneksalumni@gmail.com"><Menu.Item className="link"><Icon name='envelope outline'/>Contact</Menu.Item></a>
