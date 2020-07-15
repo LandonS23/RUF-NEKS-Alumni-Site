@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
   Button,
   Container,
-  Dropdown,
   Image,
   Sidebar,
   Segment,
@@ -45,11 +44,11 @@ class App extends Component {
                 </Link>
 
                 <Menu.Item className="link" header>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ">Pay Dues</a>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ">Pay Dues/Donate</a>
                 </Menu.Item>
-                
+
                 <Menu.Item className="link" header>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ">Donate</a>
+                    <a href="https://teespring.com/stores/rufneks-alumni-association?fbclid=IwAR2dCleJGsZTztk7sgjcaYwQMmjzI9V6gPyb3ESQr18O46QPU2r3l1l_VFs">Apparel</a>
                 </Menu.Item>
 
                 <Link to="/calendar"><Menu.Item className="link">Event Calendar</Menu.Item></Link>
@@ -97,8 +96,8 @@ class App extends Component {
 
                 <Link to="/" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='home'/>Home</Menu.Item></Link>
                 <Link to="/calendar" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='calendar alternate outline'/>Calendar</Menu.Item></Link>
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ"><Menu.Item className="link"><Icon name='money bill alternate outline'/>Pay Dues</Menu.Item></a>
-                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ"><Menu.Item className="link"><Icon name='dollar sign'/>Donate</Menu.Item></a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8FUPQJCH6RHUN&source=url&fbclid=IwAR2Bd04nBE1uQsHIGmz-drp8BWdVNjoqHOgZASyvRLS258ikLmtbgzOYAaQ"><Menu.Item className="link"><Icon name='money bill alternate outline'/>Pay Dues or Donate</Menu.Item></a>
+                <a href="https://teespring.com/stores/rufneks-alumni-association?fbclid=IwAR2dCleJGsZTztk7sgjcaYwQMmjzI9V6gPyb3ESQr18O46QPU2r3l1l_VFs"><Menu.Item className="link"><Icon name='shopping bag'/>Apparel</Menu.Item></a>
                 <Link to="/members" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='address book outline'/>Members</Menu.Item></Link>
                 <Link to="/photo-archives" onClick={this.handleSidebarHide}><Menu.Item className="link"><Icon name='photo'/>Photos</Menu.Item></Link>
                 <a href="mailto:rufneksalumni@gmail.com"><Menu.Item className="link"><Icon name='envelope outline'/>Contact</Menu.Item></a>
